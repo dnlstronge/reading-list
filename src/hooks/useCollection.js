@@ -3,7 +3,7 @@ import { db } from "../firebase/config"
 
 // firebase imports
 
-import { collection, onSnaphot } from "firebase/firestore"
+import { collection, onSnapshot } from "firebase/firestore"
 
 
 export const useCollection = (c) => {
