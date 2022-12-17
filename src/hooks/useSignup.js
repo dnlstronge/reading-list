@@ -2,7 +2,7 @@ import { useState } from "react"
 
 // imports (FB)
 
-import { auth } from '..firebase/config'
+import { auth } from '../firebase/config'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 
 export const useSignup = () => {
@@ -18,6 +18,6 @@ export const useSignup = () => {
             setError(err.message)
         })
     }
-    
+
     return ( error, signup )
 }
