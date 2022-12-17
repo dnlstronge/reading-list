@@ -11,6 +11,12 @@ export const useSignup = () => {
     const signup = (email, password) => {
         setError(null)
         createUserWithEmailAndPassword(auth, email, password)
+        .then( (res) => { 
+             console.log('User signed up: ', res.user)   
+        })
+        .catch((err) => {
+            setError(err.message)
+        })
     }
     return ( error, signup )
 }
