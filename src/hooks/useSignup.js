@@ -18,5 +18,6 @@ export const useSignup = () => {
             setError(err.message)
         })
     }
+    
     return ( error, signup )
 }
