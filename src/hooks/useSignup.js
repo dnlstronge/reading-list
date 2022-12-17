@@ -19,6 +19,6 @@ export const useSignup = () => {
         })
     }
 
-    return ( error, signuserup )
+    return { error, signuserup }
 }
 
