@@ -1,8 +1,11 @@
 import { useState } from 'react'
+import { useLogin } from '../hooks/useLogin'
+
 
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const { login } = useLogin()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -31,7 +34,7 @@ export default function Login() {
             value={password}
           />
         </label>
-        <button>log in</button>
+        <button onclick={login}>log in</button>
       </form>
     </div>
   )
