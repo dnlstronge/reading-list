@@ -5,7 +5,7 @@ import { useLogin } from '../hooks/useLogin'
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const { login } = useLogin()
+  const { login, error } = useLogin()
 
   const handleSubmit = (e) => {
     e.preventDefault()
