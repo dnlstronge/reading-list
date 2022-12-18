@@ -36,6 +36,7 @@ export default function Login() {
           />
         </label>
         <button onclick={handleSubmit}>log in</button>
+        {error && <p>{error}</p>}
       </form>
     </div>
   )
