@@ -22,6 +22,6 @@ const db = getFirestore()
 
   // init auth
 
-  const auth = getAuth()
+const auth = getAuth()
 
 export { db, auth }
