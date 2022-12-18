@@ -1,5 +1,5 @@
 import { createContext, useReducer, useEffect } from 'react'
-
+import { auth } from '../firebase/config'
 import { onAuthStateChanged } from 'firebase/auth'
 
 export const AuthContext = createContext()
@@ -24,7 +24,7 @@ export const AuthContextProvider = ({ children }) => {
   })
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(user => {
+    const unsub = onAuthStateChanged(auth, user => {
       dispatch({ type: 'AUTH_IS_READY', payload: user })
       unsub()
     })
