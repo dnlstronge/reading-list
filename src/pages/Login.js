@@ -9,7 +9,8 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email, password)
+    login(email, password)
+    
   }
   
   return (
@@ -34,7 +35,7 @@ export default function Login() {
             value={password}
           />
         </label>
-        <button onclick={login}>log in</button>
+        <button onclick={handleSubmit}>log in</button>
       </form>
     </div>
   )
