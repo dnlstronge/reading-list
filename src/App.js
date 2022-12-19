@@ -17,13 +17,13 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/">
-              <Home />
+              {user && <Home />}
             </Route>
             <Route path="/signup">
-              <Signup />
+              {!user && <Signup />}
             </Route>
             <Route path="/login">
-              <Login />
+              {!user && <Login />}
             </Route>
           </Switch>
         </BrowserRouter>
