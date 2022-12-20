@@ -16,7 +16,7 @@ export default function BookForm() {
 
     await addDoc(collection(db, 'books'), {
       title: newBook,
-      uid: 
+      uid: user.uid
     })
 
     setNewBook('')
