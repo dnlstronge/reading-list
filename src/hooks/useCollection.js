@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { db } from "../firebase/config"
 
 // firebase imports
@@ -8,6 +8,12 @@ import { collection, onSnapshot } from "firebase/firestore"
 
 export const useCollection = (c, _q) => {
     const [ documents, setDocuments] = useState(null)
+
+
+    // for query '_q'
+
+    const q =  useRef(_q).current.value
+
 
     useEffect(() => {
         let ref = collection(db, c)
@@ -20,7 +26,7 @@ export const useCollection = (c, _q) => {
             setDocuments(results)
         })
         return () => unsub()
-    }, [c])
+    }, [c, _q])
     
     return { documents }
 }
