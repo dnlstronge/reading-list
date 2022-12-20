@@ -6,7 +6,7 @@ import { db } from "../firebase/config"
 import { collection, onSnapshot } from "firebase/firestore"
 
 
-export const useCollection = (c) => {
+export const useCollection = (c, _q) => {
     const [ documents, setDocuments] = useState(null)
 
     useEffect(() => {
