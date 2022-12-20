@@ -1,6 +1,6 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
-import { Redirect } from 'react-router-dom'
+
 
 // components
 import Navbar from './components/Navbar'
