@@ -13,6 +13,7 @@ export default function BookForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     
+  
 
     await addDoc(collection(db, 'books'), {
       title: newBook,
